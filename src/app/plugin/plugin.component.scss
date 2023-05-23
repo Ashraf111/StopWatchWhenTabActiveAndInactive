@@ -1,0 +1,35 @@
+.drop-container {
+    height: 200px;
+    border: 2px #acacac;
+    border-style: solid;
+    div {
+        display: block;
+    }
+}
+.hxrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.col4 {
+    flex: 1 0 200px;
+}
+.dragover {
+    background: #b99df1;
+}
+.grabbed {
+    color: 2px solid #7e00ff;
+    background: #00ff05;
+}
+:host {
+    background: white;
+}
+.plugin {
+    background: #113a65;
+}
+.selected {
+    background: #f3f3f3;
+}
+.tb-table::ng-deep {
+    margin-left: auto;
+}
