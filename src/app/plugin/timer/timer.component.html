@@ -1,22 +1,22 @@
 <div class="timer-container">
-    <a *ngIf="showRunTimer" (click)="runningTimer('reset')" class="timer-action" href="javascript:void(0)">
-      <i class="material-icons">Restart</i>
+    <a *ngIf="showRunTimer" (click)="runningTimer('reset')" class="timer-action"  href="javascript:void(0)">
+      <i>Reset</i>
     </a>
-    <a *ngIf="isRunning && showRunTimer" (click)="runningTimer('stop')" class="timer-action pause_icon"
+    <a *ngIf="isRunning && showRunTimer" (click)="runningTimer('stop')" class="timer-action" 
       href="javascript:void(0)">
-      <i class="material-icons">pause</i>
+      <i>pause</i>
     </a>
     <a *ngIf="!isRunning && showRunTimer" (click)="runningTimer('start')" class="timer-action" href="javascript:void(0)">
-      <i class="material-icons">play</i>
+      <i>play</i>
     </a>
-    <span class="counter">
-      <input [disabled]="isDisabled" type="text" class="timer-count" name="hours" maxlength="2" max="99" 
+    <span>
+      <input [disabled]="isDisabled" type="text" name="hours" maxlength="2" max="99" 
          (blur)="calculateTimeSpent('hours')" [(ngModel)]="hours">
-      <span class="timer-count-separator" [class.blink]="isRunning">:</span>
-      <input [disabled]="isDisabled" type="text" class="timer-count" name="minutes" maxlength="2" max="59" 
+      <span>:</span>
+      <input [disabled]="isDisabled" type="text"  name="minutes" maxlength="2" max="59" 
          (blur)="calculateTimeSpent('minutes')" [(ngModel)]="minutes">
-      <span class="timer-count-separator" [class.blink]="isRunning">:</span>
-      <input [disabled]="isDisabled" type="text" class="timer-count" name="seconds" maxlength="2" max="59" 
+      <span>:</span>
+      <input [disabled]="isDisabled" type="text"  name="seconds" maxlength="2" max="59" 
          (blur)="calculateTimeSpent('seconds')" [(ngModel)]="seconds">
     </span>
   </div>

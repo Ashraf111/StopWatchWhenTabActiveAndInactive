@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SystemComponent implements OnInit {
   isRunningTimer: boolean=false;  
-  timer:any={}
+  timer:any={
+    minutes: "00",
+        hours: "00",
+        seconds: "00"
+  }
   isRunning: boolean=false;
   constructor() { }
 
